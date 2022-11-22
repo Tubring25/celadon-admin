@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
+import { HashRouter } from 'react-router-dom';
+import Router from './router/index';
 
 function App() {
-	return (
-		<div className='App'>
-			<header className='App-header'>App</header>
-		</div>
-	);
+  return (
+    <HashRouter>
+      <Router />
+    </HashRouter>
+  );
 }
 
 export default App;
