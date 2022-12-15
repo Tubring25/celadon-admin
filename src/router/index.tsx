@@ -1,9 +1,9 @@
 import { Navigate, useRoutes } from 'react-router-dom';
-import { RouteObject } from '../router/interface';
-import LayoutIndex from '../layouts/index';
-import Home from '../views/home/index';
-import Login from '../views/login/index';
-import Authority from '../views/authority/index';
+import { RouteObject } from '@/router/interface';
+import LayoutIndex from '@/layouts/index';
+import Home from '@/views/home/index';
+import Login from '@/views/login/index';
+import Authority from '@/views/authority/index';
 import React from 'react';
 
 export const rootRouter: RouteObject[] = [
@@ -53,8 +53,7 @@ export const rootRouter: RouteObject[] = [
 ];
 
 const Router = () => {
-  const routes = useRoutes(rootRouter);
-  return routes;
+  return useRoutes(rootRouter);
 };
 
 export default Router;
