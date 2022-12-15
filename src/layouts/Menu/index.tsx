@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { rootRouter } from '../../router/index';
+import { rootRouter } from '@/router';
 import type { MenuProps } from 'antd/es/menu';
 import { Menu, Spin } from 'antd';
 import { useNavigate } from 'react-router-dom';
@@ -44,7 +44,7 @@ const LayoutMenu = () => {
         return newArr.push(
           getItem(item.meta.label, item.path, addIcon(item.meta?.icon ?? null)),
         );
-      if (item.children.length == 1) {
+      if (item.children.length === 1) {
         return newArr.push(
           getItem(
             item.children[0].meta.label,

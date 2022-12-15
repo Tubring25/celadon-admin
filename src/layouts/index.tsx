@@ -1,21 +1,28 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Outlet } from 'react-router-dom';
-import { Layout } from 'antd';
+import { Layout, Breadcrumb } from 'antd';
 import React, { useState } from 'react';
 import LayoutMenu from './Menu/index';
+import './index.less';
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 const LayoutCus = () => {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout style={{ height: '100vh' }}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className='logo' />
-        <LayoutMenu />
+    <Layout style={{ minHeight: '100vh' }}>
+      <Sider
+        collapsible
+        collapsed={collapsed}
+        onCollapse={value => setCollapsed(value)}
+      >
+        <Sider trigger={null} collapsible collapsed={collapsed}>
+          <div className='logo' />
+          <LayoutMenu />
+        </Sider>
       </Sider>
       <Layout className='site-layout'>
-        <Header className='site-layout-background' style={{ padding: 0 }}>
+        <Header style={{ padding: 0 }}>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -24,16 +31,18 @@ const LayoutCus = () => {
             },
           )}
         </Header>
-        <Content
-          className='site-layout-background'
-          style={{
-            margin: '24px 16px',
-            padding: 24,
-            minHeight: 280,
-          }}
-        >
-          <Outlet></Outlet>
+        <Content style={{ margin: '0 16px' }}>
+          <Breadcrumb style={{ margin: '16px 0' }}>
+            <Breadcrumb.Item>User</Breadcrumb.Item>
+            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+          </Breadcrumb>
+          <div className='site-layout-background'>
+            <Outlet></Outlet>
+          </div>
         </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
       </Layout>
     </Layout>
   );
