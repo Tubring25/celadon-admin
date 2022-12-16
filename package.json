@@ -13,7 +13,7 @@
 		"lint-staged": "lint-staged"
 	},
 	"dependencies": {
-		"@ant-design/icons": "^4.7.0",
+		"@ant-design/icons": "^4.8.0",
 		"@craco/craco": "^7.0.0",
 		"@reduxjs/toolkit": "^1.9.0",
 		"@testing-library/jest-dom": "^5.16.5",
@@ -23,7 +23,7 @@
 		"@types/node": "^16.18.3",
 		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.8",
-		"antd": "^4.24.1",
+		"antd": "^5.0.7",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-redux": "^8.0.5",
