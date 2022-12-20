@@ -1,10 +1,12 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import './login.less';
+import { login } from '@/api/login/login';
 
 const Login = () => {
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     console.log('Success:', values);
+    await login();
   };
 
   const onFinishFailed = (errorInfo: any) => {
