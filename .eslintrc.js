@@ -54,6 +54,5 @@ module.exports = {
 				allowTemplateLiterals: true,
 			},
 		],
-		indent: 'off',
 	},
 };
