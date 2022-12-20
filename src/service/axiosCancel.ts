@@ -15,7 +15,6 @@ export class AxiosCanceler {
   addPending(config: AxiosRequestConfig) {
     this.removePending(config);
     const url = getPendingUrl(config);
-    console.log(url);
     config.cancelToken =
       config.cancelToken ||
       new axios.CancelToken(cancel => {
