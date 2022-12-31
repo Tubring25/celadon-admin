@@ -24,6 +24,10 @@
 		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.8",
 		"antd": "^5.0.7",
+		"axios": "^1.2.1",
+		"http-proxy-middleware": "^2.0.6",
+		"js-cookie": "^3.0.1",
+		"lodash-es": "^4.17.21",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-redux": "^8.0.5",
@@ -52,6 +56,8 @@
 		]
 	},
 	"devDependencies": {
+		"@types/js-cookie": "^3.0.2",
+		"@types/lodash-es": "^4.17.6",
 		"@typescript-eslint/eslint-plugin": "^5.42.1",
 		"@typescript-eslint/parser": "^5.42.1",
 		"craco-less": "^2.0.0",
