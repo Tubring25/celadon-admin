@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { rootRouter } from '@/router';
+import { rootRouter } from '@/router/routes';
 import type { MenuProps } from 'antd/es/menu';
 import { Menu, Spin } from 'antd';
 import { useNavigate } from 'react-router-dom';

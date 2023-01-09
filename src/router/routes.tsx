@@ -1,4 +1,4 @@
-import { Navigate, useRoutes } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { RouteObject } from '@/router/interface';
 import LayoutIndex from '@/layouts/index';
 import Home from '@/views/home/index';
@@ -51,9 +51,3 @@ export const rootRouter: RouteObject[] = [
     element: <Login />,
   },
 ];
-
-const Router = () => {
-  return useRoutes(rootRouter);
-};
-
-export default Router;
